@@ -3,13 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Mayrlla Brenda Paixão 💙</title>
 
     <style>
         /* =========================
-           CONFIGURAÇÕES GERAIS
+           CONFIGURAÇÕES GERAIS (FIXO - SEM RESPONSIVIDADE)
         ========================== */
 
         * {
@@ -24,10 +22,12 @@
 
         body {
             font-family: "Georgia", serif;
-            background: linear-gradient(135deg, #eaf7ff, #cceeff, #dff5ff);
-            color: #315b73;
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb, #e1f5fe);
+            color: #2a52be;
             min-height: 100vh;
-            overflow-x: hidden;
+            width: 1200px; /* Largura fixa sem responsividade */
+            margin: 0 auto;
+            position: relative;
         }
 
         /* =========================
@@ -48,10 +48,10 @@
         .coracao {
             position: absolute;
             bottom: -50px;
-            color: #8fd3f4;
-            font-size: 20px;
+            color: #81d4fa;
+            font-size: 22px;
             animation: subir 8s linear infinite;
-            opacity: 0.7;
+            opacity: 0.8;
         }
 
         @keyframes subir {
@@ -61,7 +61,7 @@
             }
 
             20% {
-                opacity: 0.8;
+                opacity: 0.9;
             }
 
             100% {
@@ -79,19 +79,20 @@
             z-index: 2;
             text-align: center;
             padding: 45px 20px 30px;
-            background: linear-gradient(135deg, #a9ddf7, #c9edff);
-            box-shadow: 0 4px 15px rgba(72, 145, 180, 0.2);
+            background: linear-gradient(135deg, #b3e5fc, #e1f5fe);
+            box-shadow: 0 4px 15px rgba(129, 212, 250, 0.4);
+            border-bottom: 2px solid #90caf9;
         }
 
         header h1 {
-            color: #24536d;
+            color: #1565c0;
             font-size: 38px;
             margin-bottom: 12px;
         }
 
         header p {
             font-size: 18px;
-            color: #47778f;
+            color: #1976d2;
         }
 
         /* =========================
@@ -102,38 +103,41 @@
             position: sticky;
             top: 0;
             z-index: 10;
-            background: rgba(180, 226, 247, 0.95);
+            background: rgba(225, 245, 254, 0.95);
             backdrop-filter: blur(8px);
-            padding: 12px;
-            box-shadow: 0 3px 12px rgba(70, 130, 160, 0.2);
+            padding: 15px;
+            box-shadow: 0 3px 12px rgba(144, 202, 249, 0.3);
+            border-bottom: 1px solid #b3e5fc;
         }
 
         .menu {
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
+            gap: 12px;
             list-style: none;
         }
 
         .menu button {
-            border: none;
-            background: #e8f8ff;
-            color: #315b73;
-            padding: 12px 18px;
+            border: 1px solid #90caf9;
+            background: #f1f8e9;
+            background-color: #e3f2fd;
+            color: #1565c0;
+            padding: 12px 20px;
             border-radius: 25px;
             cursor: pointer;
             font-family: inherit;
             font-size: 15px;
+            font-weight: bold;
             transition: 0.3s;
-            box-shadow: 0 3px 8px rgba(67, 132, 160, 0.15);
+            box-shadow: 0 3px 8px rgba(144, 202, 249, 0.25);
         }
 
         .menu button:hover,
         .menu button.ativo {
-            background: #6fc4ed;
+            background: #64b5f6;
             color: white;
             transform: translateY(-2px);
+            box-shadow: 0 5px 12px rgba(100, 181, 246, 0.4);
         }
 
         /* =========================
@@ -143,7 +147,7 @@
         main {
             position: relative;
             z-index: 1;
-            max-width: 1100px;
+            width: 1100px;
             margin: auto;
             padding: 35px 20px;
         }
@@ -170,30 +174,31 @@
         }
 
         .cartao {
-            background: rgba(255, 255, 255, 0.75);
-            border: 1px solid rgba(130, 205, 235, 0.5);
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid #b3e5fc;
             border-radius: 25px;
-            padding: 30px;
+            padding: 35px;
             margin-bottom: 25px;
-            box-shadow: 0 8px 25px rgba(62, 130, 160, 0.15);
+            box-shadow: 0 8px 25px rgba(144, 202, 249, 0.25);
             backdrop-filter: blur(5px);
         }
 
         h2 {
-            color: #28617d;
+            color: #1565c0;
             text-align: center;
             margin-bottom: 20px;
-            font-size: 30px;
+            font-size: 32px;
         }
 
         h3 {
-            color: #367695;
+            color: #1976d2;
             margin-bottom: 10px;
         }
 
         p {
             line-height: 1.7;
             font-size: 17px;
+            color: #0d47a1;
         }
 
         /* =========================
@@ -211,6 +216,7 @@
         }
 
         @keyframes pulsar {
+
             0%,
             100% {
                 transform: scale(1);
@@ -234,11 +240,13 @@
 
         .data {
             display: inline-block;
-            background: #d8f2ff;
-            padding: 10px 20px;
+            background: #bbdefb;
+            padding: 12px 25px;
             border-radius: 20px;
             margin-top: 15px;
-            color: #39708c;
+            color: #0d47a1;
+            font-weight: bold;
+            font-size: 18px;
         }
 
         /* =========================
@@ -248,23 +256,25 @@
         .lista-porques {
             list-style: none;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
         }
 
         .lista-porques li {
-            background: #e8f8ff;
-            padding: 18px;
-            border-radius: 15px;
+            background: #e3f2fd;
+            border: 1px solid #90caf9;
+            padding: 20px;
+            border-radius: 18px;
             text-align: center;
-            font-size: 18px;
-            color: #35677e;
+            font-size: 17px;
+            color: #1565c0;
             transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(144, 202, 249, 0.15);
         }
 
         .lista-porques li:hover {
             transform: scale(1.04);
-            background: #d0efff;
+            background: #bbdefb;
         }
 
         .lista-porques li::before {
@@ -272,20 +282,21 @@
         }
 
         /* =========================
-           GALERIA
+           GALERIA / LEMBRANÇAS
         ========================== */
 
         .galeria {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 25px;
         }
 
         .foto-card {
-            background: #f5fcff;
+            background: #ffffff;
+            border: 1px solid #b3e5fc;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(50, 120, 150, 0.15);
+            box-shadow: 0 5px 15px rgba(144, 202, 249, 0.2);
             transition: 0.3s;
         }
 
@@ -303,26 +314,27 @@
         .foto-card figcaption {
             padding: 15px;
             text-align: center;
-            color: #416f83;
+            color: #1976d2;
             font-size: 16px;
         }
 
         /* =========================
-           MESES
+           MESES DE NAMORO
         ========================== */
 
         .meses {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
         }
 
         .mes {
-            background: linear-gradient(145deg, #f2fbff, #dff4ff);
+            background: linear-gradient(145deg, #ffffff, #e3f2fd);
+            border: 1px solid #90caf9;
             border-radius: 20px;
-            padding: 15px;
+            padding: 20px;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(50, 120, 150, 0.12);
+            box-shadow: 0 5px 15px rgba(144, 202, 249, 0.18);
         }
 
         .mes h3 {
@@ -338,7 +350,7 @@
         }
 
         .mes p {
-            margin-top: 10px;
+            margin-top: 12px;
             font-size: 15px;
         }
 
@@ -348,16 +360,17 @@
 
         .buques {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 25px;
         }
 
         .buque {
-            background: #f5fcff;
+            background: #ffffff;
+            border: 1px solid #b3e5fc;
             border-radius: 20px;
-            padding: 15px;
+            padding: 20px;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(50, 120, 150, 0.15);
+            box-shadow: 0 5px 15px rgba(144, 202, 249, 0.2);
             transition: 0.3s;
         }
 
@@ -389,18 +402,18 @@
             height: 180px;
             margin: 20px auto;
             border-radius: 50%;
-            background: linear-gradient(145deg, #7bc8ed, #b9e8ff);
+            background: linear-gradient(145deg, #64b5f6, #bbdefb);
             display: flex;
             justify-content: center;
             align-items: center;
             font-size: 65px;
-            box-shadow: 0 10px 25px rgba(70, 140, 170, 0.25);
+            box-shadow: 0 10px 25px rgba(100, 181, 246, 0.4);
             animation: girar 8s linear infinite;
         }
 
         @keyframes girar {
             from {
-                transform: rotate(0);
+                transform: rotate(0deg);
             }
 
             to {
@@ -408,10 +421,10 @@
             }
         }
 
-        .musica iframe {
-            max-width: 100%;
-            border-radius: 15px;
-            margin-top: 20px;
+        .musica-player {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
         }
 
         /* =========================
@@ -423,47 +436,10 @@
             z-index: 2;
             text-align: center;
             padding: 35px 20px;
-            background: #a9ddf7;
-            color: #28576e;
+            background: #b3e5fc;
+            color: #1565c0;
             margin-top: 20px;
-        }
-
-        footer img {
-            width: 120px;
-            margin-top: 15px;
-        }
-
-        /* =========================
-           CELULAR
-        ========================== */
-
-        @media (max-width: 600px) {
-
-            header h1 {
-                font-size: 28px;
-            }
-
-            .inicio h2 {
-                font-size: 28px;
-            }
-
-            .menu button {
-                padding: 10px 12px;
-                font-size: 13px;
-            }
-
-            .cartao {
-                padding: 20px;
-            }
-
-            h2 {
-                font-size: 25px;
-            }
-
-            .foto-card img,
-            .mes img {
-                height: 220px;
-            }
+            border-top: 2px solid #90caf9;
         }
     </style>
 </head>
@@ -476,48 +452,42 @@
     <!-- CABEÇALHO -->
     <header>
         <h1>Mayrlla Brenda Paixão 💙</h1>
+        <p>Um cantinho especial feito com todo carinho para você!</p>
     </header>
 
-    <!-- MENU -->
+    <!-- MENU DE NAVEGAÇÃO -->
     <nav>
         <ul class="menu">
-
             <li>
                 <button class="botao ativo" onclick="abrirAba('inicio', this)">
                     🏠 Início
                 </button>
             </li>
-
             <li>
                 <button class="botao" onclick="abrirAba('porques', this)">
                     💙 Meus porquês
                 </button>
             </li>
-
             <li>
                 <button class="botao" onclick="abrirAba('meses', this)">
                     📸 Nossos meses
                 </button>
             </li>
-
             <li>
                 <button class="botao" onclick="abrirAba('fotos', this)">
                     🖼️ Lembranças
                 </button>
             </li>
-
             <li>
                 <button class="botao" onclick="abrirAba('buques', this)">
                     💐 Buquês
                 </button>
             </li>
-
             <li>
                 <button class="botao" onclick="abrirAba('musica', this)">
                     🎵 Nossa música
                 </button>
             </li>
-
         </ul>
     </nav>
 
@@ -526,39 +496,217 @@
         <!-- =========================
              INÍCIO
         ========================== -->
-
         <section id="inicio" class="aba ativa">
-
             <div class="cartao inicio">
-
-               
-
+                <div class="coracao-grande">💙</div>
                 <h2>Só para te lembrar que eu te amo!</h2>
-
                 <p class="mensagem">
-                    Obrigada por esses 7 meses 💗
-                    Você é incrível, e eu amo tudo em você!
+                    Obrigada por esses meses incríveis ao seu lado 💗
+                    Você é a pessoa mais especial da minha vida e eu amo tudo em você!
                 </p>
-
                 <div class="data">
                     💕 7 meses de nós 💕
                 </div>
-
             </div>
-
         </section>
-
 
         <!-- =========================
              MEUS PORQUÊS
         ========================== -->
-
         <section id="porques" class="aba">
-
             <div class="cartao">
-
                 <h2>💙 Meus porquês</h2>
-
                 <p style="text-align:center; margin-bottom:25px;">
-                    Existem milhares de motivos para eu amar você,
-                    mas
+                    Existem milhares de motivos para eu amar você, mas aqui estão alguns dos principais:
+                </p>
+
+                <ul class="lista-porques">
+                    <li>O seu sorriso ilumina qualquer dia meu.</li>
+                    <li>O seu abraço é o meu lugar seguro no mundo.</li>
+                    <li>Você me faz rir mesmo nos dias difíceis.</li>
+                    <li>A sua bondade e carinho com as pessoas.</li>
+                    <li>A forma como você cuida de mim.</li>
+                    <li>Nossa conexão e conversas infinitas.</li>
+                    <li>Seu olhar sincero e apaixonante.</li>
+                    <li>Por ser minha melhor amiga e namorada.</li>
+                    <li>Simplesmente por você ser quem você é.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- =========================
+             FOTOS DE CADA MÊS DE NAMORO
+        ========================== -->
+        <section id="meses" class="aba">
+            <div class="cartao">
+                <h2>📸 Nossos meses de namoro</h2>
+                <p style="text-align:center; margin-bottom:25px;">Cada mês ao seu lado foi um capítulo inesquecível da nossa história.</p>
+
+                <div class="meses">
+                    <div class="mes">
+                        <h3>1º Mês</h3>
+                        <img src="https://via.placeholder.com/300x230/bbdefb/1565c0?text=Mes+1" alt="1º Mês">
+                        <p>O começo de algo lindo e transformador.</p>
+                    </div>
+
+                    <div class="mes">
+                        <h3>2º Mês</h3>
+                        <img src="https://via.placeholder.com/300x230/bbdefb/1565c0?text=Mes+2" alt="2º Mês">
+                        <p>Descobrindo mais e mais motivos para te amar.</p>
+                    </div>
+
+                    <div class="mes">
+                        <h3>3º Mês</h3>
+                        <img src="https://via.placeholder.com/300x230/bbdefb/1565c0?text=Mes+3" alt="3º Mês">
+                        <p>Momentos inesquecíveis juntas.</p>
+                    </div>
+
+                    <div class="mes">
+                        <h3>4º Mês</h3>
+                        <img src="https://via.placeholder.com/300x230/bbdefb/1565c0?text=Mes+4" alt="4º Mês">
+                        <p>Crescendo e fortalecendo nosso amor.</p>
+                    </div>
+
+                    <div class="mes">
+                        <h3>5º Mês</h3>
+                        <img src="https://via.placeholder.com/300x230/bbdefb/1565c0?text=Mes+5" alt="5º Mês">
+                        <p>Risadas, carinhos e cumplicidade.</p>
+                    </div>
+
+                    <div class="mes">
+                        <h3>6º Mês</h3>
+                        <img src="https://via.placeholder.com/300x230/bbdefb/1565c0?text=Mes+6" alt="6º Mês">
+                        <p>Metade de um ano incrível do seu lado!</p>
+                    </div>
+
+                    <div class="mes">
+                        <h3>7º Mês</h3>
+                        <img src="https://via.placeholder.com/300x230/bbdefb/1565c0?text=Mes+7" alt="7º Mês">
+                        <p>E este é só o começo da nossa caminhada.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================
+             LEMBRANÇAS
+        ========================== -->
+        <section id="fotos" class="aba">
+            <div class="cartao">
+                <h2>🖼️ Outras Lembranças</h2>
+                <div class="galeria">
+                    <figure class="foto-card">
+                        <img src="https://via.placeholder.com/300x260/b3e5fc/1565c0?text=Lembrança+1" alt="Lembrança 1">
+                        <figcaption>Nosso passeio especial</figcaption>
+                    </figure>
+
+                    <figure class="foto-card">
+                        <img src="https://via.placeholder.com/300x260/b3e5fc/1565c0?text=Lembrança+2" alt="Lembrança 2">
+                        <figcaption>Aquele dia inesquecível</figcaption>
+                    </figure>
+
+                    <figure class="foto-card">
+                        <img src="https://via.placeholder.com/300x260/b3e5fc/1565c0?text=Lembrança+3" alt="Lembrança 3">
+                        <figcaption>Amo essa foto nossa</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================
+             BUQUÊS
+        ========================== -->
+        <section id="buques" class="aba">
+            <div class="cartao">
+                <h2>💐 Flores para Você</h2>
+                <p style="text-align:center; margin-bottom:25px;">Flores azuis tão lindas e especiais quanto o seu sorriso.</p>
+
+                <div class="buques">
+                    <div class="buque">
+                        <img src="https://via.placeholder.com/300x280/90caf9/ffffff?text=Buquê+1" alt="Buquê 1">
+                        <h3>Rosas Azuis</h3>
+                        <p>Para lembrar o quanto você é única.</p>
+                    </div>
+
+                    <div class="buque">
+                        <img src="https://via.placeholder.com/300x280/90caf9/ffffff?text=Buquê+2" alt="Buquê 2">
+                        <h3>Flores do Campo</h3>
+                        <p>Representando a pureza do nosso amor.</p>
+                    </div>
+
+                    <div class="buque">
+                        <img src="https://via.placeholder.com/300x280/90caf9/ffffff?text=Buquê+3" alt="Buquê 3">
+                        <h3>Buquê Especial</h3>
+                        <p>Um carinho em forma de flor.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================
+             NOSSA MÚSICA
+        ========================== -->
+        <section id="musica" class="aba">
+            <div class="cartao musica">
+                <h2>🎵 Nossa Música</h2>
+                <p>Essa música sempre me faz lembrar de você e dos nossos momentos juntos!</p>
+
+                <div class="disco">
+                    🎶
+                </div>
+
+                <div class="musica-player">
+                    <!-- Player do Spotify Embed (Substitua o link do src pela sua música preferida) -->
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4d0L8618aUn2C71J611C8y?utm_source=generator" width="80%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>Feito com todo o amor do mundo para <strong>Mayrlla Brenda Paixão</strong> 💙</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Função para alternar entre as abas
+        function abrirAba(nomeAba, elementoBotao) {
+            // Esconde todas as abas
+            const abas = document.querySelectorAll('.aba');
+            abas.forEach(aba => aba.classList.remove('ativa'));
+
+            // Remove a classe 'ativo' de todos os botões
+            const botoes = document.querySelectorAll('.menu .botao');
+            botoes.forEach(botao => botao.classList.remove('ativo'));
+
+            // Mostra a aba selecionada e ativa o botão clicado
+            document.getElementById(nomeAba).classList.add('ativa');
+            elementoBotao.classList.add('ativo');
+        }
+
+        // Criador de corações flutuantes no fundo
+        function criarCoracoes() {
+            const containerCoracoes = document.getElementById('coracoes');
+            const totalCoracoes = 18;
+
+            for (let i = 0; i < totalCoracoes; i++) {
+                const coracao = document.createElement('div');
+                coracao.classList.add('coracao');
+                coracao.innerHTML = '💙';
+                coracao.style.left = Math.random() * 100 + 'vw';
+                coracao.style.animationDuration = (Math.random() * 4 + 6) + 's';
+                coracao.style.animationDelay = (Math.random() * 5) + 's';
+                coracao.style.fontSize = (Math.random() * 15 + 15) + 'px';
+                containerCoracoes.appendChild(coracao);
+            }
+        }
+
+        // Inicializa os corações ao carregar a página
+        window.onload = criarCoracoes;
+    </script>
+
+</body>
+
+</html>
