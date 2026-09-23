@@ -1,56 +1,567 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <title>Mayrlla Brenda Paixão</title>
-        <meta charset="UTF-8">
-    </head>
-    <body>
-        <h1>Só para te lembrar que eu te amo!</h1>
-        <p>Obrigada por esses 6 meses, você é incrível, e eu amo tudo em você!</p>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mayrlla Brenda Paixão 💙</title>
+
+    <style>
+        /* =========================
+           CONFIGURAÇÕES GERAIS
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Georgia", serif;
+            background: linear-gradient(135deg, #eaf7ff, #cceeff, #dff5ff);
+            color: #315b73;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* =========================
+           CORAÇÕES FLUTUANTES
+        ========================== */
+
+        .coracoes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .coracao {
+            position: absolute;
+            bottom: -50px;
+            color: #8fd3f4;
+            font-size: 20px;
+            animation: subir 8s linear infinite;
+            opacity: 0.7;
+        }
+
+        @keyframes subir {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translateY(-110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* =========================
+           CABEÇALHO
+        ========================== */
+
+        header {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 45px 20px 30px;
+            background: linear-gradient(135deg, #a9ddf7, #c9edff);
+            box-shadow: 0 4px 15px rgba(72, 145, 180, 0.2);
+        }
+
+        header h1 {
+            color: #24536d;
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        header p {
+            font-size: 18px;
+            color: #47778f;
+        }
+
+        /* =========================
+           MENU
+        ========================== */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: rgba(180, 226, 247, 0.95);
+            backdrop-filter: blur(8px);
+            padding: 12px;
+            box-shadow: 0 3px 12px rgba(70, 130, 160, 0.2);
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style: none;
+        }
+
+        .menu button {
+            border: none;
+            background: #e8f8ff;
+            color: #315b73;
+            padding: 12px 18px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 15px;
+            transition: 0.3s;
+            box-shadow: 0 3px 8px rgba(67, 132, 160, 0.15);
+        }
+
+        .menu button:hover,
+        .menu button.ativo {
+            background: #6fc4ed;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           CONTEÚDO
+        ========================== */
+
+        main {
+            position: relative;
+            z-index: 1;
+            max-width: 1100px;
+            margin: auto;
+            padding: 35px 20px;
+        }
+
+        .aba {
+            display: none;
+            animation: aparecer 0.6s ease;
+        }
+
+        .aba.ativa {
+            display: block;
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cartao {
+            background: rgba(255, 255, 255, 0.75);
+            border: 1px solid rgba(130, 205, 235, 0.5);
+            border-radius: 25px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 25px rgba(62, 130, 160, 0.15);
+            backdrop-filter: blur(5px);
+        }
+
+        h2 {
+            color: #28617d;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 30px;
+        }
+
+        h3 {
+            color: #367695;
+            margin-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        /* =========================
+           INÍCIO
+        ========================== */
+
+        .inicio {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .inicio .coracao-grande {
+            font-size: 70px;
+            animation: pulsar 1.5s infinite;
+        }
+
+        @keyframes pulsar {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.15);
+            }
+        }
+
+        .inicio h2 {
+            font-size: 36px;
+            margin-top: 15px;
+        }
+
+        .inicio .mensagem {
+            max-width: 700px;
+            margin: 20px auto;
+            font-size: 20px;
+        }
+
+        .data {
+            display: inline-block;
+            background: #d8f2ff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            margin-top: 15px;
+            color: #39708c;
+        }
+
+        /* =========================
+           PORQUÊS
+        ========================== */
+
+        .lista-porques {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+        }
+
+        .lista-porques li {
+            background: #e8f8ff;
+            padding: 18px;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 18px;
+            color: #35677e;
+            transition: 0.3s;
+        }
+
+        .lista-porques li:hover {
+            transform: scale(1.04);
+            background: #d0efff;
+        }
+
+        .lista-porques li::before {
+            content: "💙 ";
+        }
+
+        /* =========================
+           GALERIA
+        ========================== */
+
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 25px;
+        }
+
+        .foto-card {
+            background: #f5fcff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(50, 120, 150, 0.15);
+            transition: 0.3s;
+        }
+
+        .foto-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .foto-card img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .foto-card figcaption {
+            padding: 15px;
+            text-align: center;
+            color: #416f83;
+            font-size: 16px;
+        }
+
+        /* =========================
+           MESES
+        ========================== */
+
+        .meses {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+        }
+
+        .mes {
+            background: linear-gradient(145deg, #f2fbff, #dff4ff);
+            border-radius: 20px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(50, 120, 150, 0.12);
+        }
+
+        .mes h3 {
+            margin-bottom: 12px;
+            font-size: 21px;
+        }
+
+        .mes img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .mes p {
+            margin-top: 10px;
+            font-size: 15px;
+        }
+
+        /* =========================
+           BUQUÊS
+        ========================== */
+
+        .buques {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .buque {
+            background: #f5fcff;
+            border-radius: 20px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(50, 120, 150, 0.15);
+            transition: 0.3s;
+        }
+
+        .buque:hover {
+            transform: translateY(-6px);
+        }
+
+        .buque img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .buque h3 {
+            margin-top: 15px;
+        }
+
+        /* =========================
+           NOSSA MÚSICA
+        ========================== */
+
+        .musica {
+            text-align: center;
+        }
+
+        .disco {
+            width: 180px;
+            height: 180px;
+            margin: 20px auto;
+            border-radius: 50%;
+            background: linear-gradient(145deg, #7bc8ed, #b9e8ff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 65px;
+            box-shadow: 0 10px 25px rgba(70, 140, 170, 0.25);
+            animation: girar 8s linear infinite;
+        }
+
+        @keyframes girar {
+            from {
+                transform: rotate(0);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .musica iframe {
+            max-width: 100%;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+
+        /* =========================
+           RODAPÉ
+        ========================== */
+
+        footer {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 35px 20px;
+            background: #a9ddf7;
+            color: #28576e;
+            margin-top: 20px;
+        }
+
+        footer img {
+            width: 120px;
+            margin-top: 15px;
+        }
+
+        /* =========================
+           CELULAR
+        ========================== */
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            .inicio h2 {
+                font-size: 28px;
+            }
+
+            .menu button {
+                padding: 10px 12px;
+                font-size: 13px;
+            }
+
+            .cartao {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 25px;
+            }
+
+            .foto-card img,
+            .mes img {
+                height: 220px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- CORAÇÕES FLUTUANTES -->
+    <div class="coracoes" id="coracoes"></div>
+
+    <!-- CABEÇALHO -->
+    <header>
+        <h1>Mayrlla Brenda Paixão 💙</h1>
+        <p>Uma pequena página para guardar um pouquinho da nossa história.</p>
+    </header>
+
+    <!-- MENU -->
+    <nav>
+        <ul class="menu">
+
+            <li>
+                <button class="botao ativo" onclick="abrirAba('inicio', this)">
+                    🏠 Início
+                </button>
+            </li>
+
+            <li>
+                <button class="botao" onclick="abrirAba('porques', this)">
+                    💙 Meus porquês
+                </button>
+            </li>
+
+            <li>
+                <button class="botao" onclick="abrirAba('meses', this)">
+                    📸 Nossos meses
+                </button>
+            </li>
+
+            <li>
+                <button class="botao" onclick="abrirAba('fotos', this)">
+                    🖼️ Lembranças
+                </button>
+            </li>
+
+            <li>
+                <button class="botao" onclick="abrirAba('buques', this)">
+                    💐 Buquês
+                </button>
+            </li>
+
+            <li>
+                <button class="botao" onclick="abrirAba('musica', this)">
+                    🎵 Nossa música
+                </button>
+            </li>
+
+        </ul>
+    </nav>
+
+    <main>
+
+        <!-- =========================
+             INÍCIO
+        ========================== -->
+
+        <section id="inicio" class="aba ativa">
+
+            <div class="cartao inicio">
+
+                <div class="coracao-grande">💙</div>
+
+                <h2>Só para te lembrar que eu te amo!</h2>
+
+                <p class="mensagem">
+                    Obrigada por esses 6 meses.
+                    Você é incrível, e eu amo tudo em você!
+                    Que essa seja apenas uma pequena parte
+                    de todas as lembranças que ainda vamos construir juntas.
+                </p>
+
+                <div class="data">
+                    💕 6 meses de nós 💕
+                </div>
+
+            </div>
+
+        </section>
 
 
-        <ol>
-            <p><strong>Meus porquês</strong></p>
-            <li>Sua voz</li>
-            <li>Seu sorriso</li>
-            <li>Sua risada</li>
-            <li>Seu cabelo</li>
-            <li>Seu cheiro</li>
-            <li>Seu carinho</li>
-            <li>Seu  chamego</li>
-            <li>Seu  beijo</li>
-            <li>Seu cuidado</li>
-            <li>Sua família</li>
-        </ol>
+        <!-- =========================
+             MEUS PORQUÊS
+        ========================== -->
 
-        <h1>Lembranças</h1>
-        <figure>
-             <img src="primeirafoto.jpeg" alt="Nossa primeira foto" width="200">
-             <figcaption>Nossa primeira foto</figcaption>
-             <br><br>
-             <img src="igreja.jpeg" width="200">
-             <figcaption>Juntas na igreja na Sexta-Feira da Paixão</figcaption>
-             <br><br>
-             <img src="dormirprimeravez.jpeg" width="200">
-             <figcaption>Primeira vez dormindo na sua casa</figcaption>
-             <br><br>
-             <img src="eventofamilia.jpeg" width="200">
-             <figcaption>Primeiro evento em família - Aniversário da Bruna</figcaption>
-             <br><br>
-             <img src="festajunina.jpeg" width="200">
-             <figcaption>Nossa primeira festa junina</figcaption>
-             <br><br>
-             <img src="primeraparque.jpeg" width="200">
-             <figcaption>Primeira vez indo juntas no parque</figcaption>
-             <br><br>
-             <img src="sobrinha.jpeg" width="200">
-             <figcaption>Você com minha sobrinha</figcaption>
-             <br><br>
-             <img src="eventofamilia2.jpeg" width="200">
-             <figcaption>Segundo evento em família - Aniversário das gemeas</figcaption>
-        </figure>
-        
-        <h2>Bom trabalho, eu amo muito você!</h2>
-        <img src="coração.png" width="200">
-    </body>
-</html>
+        <section id="porques" class="aba">
+
+            <div class="cartao">
+
+                <h2>💙 Meus porquês</h2>
+
+                <p style="text-align:center; margin-bottom:25px;">
+                    Existem milhares de motivos para eu amar você,
+                    mas
