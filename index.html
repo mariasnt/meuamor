@@ -237,45 +237,41 @@
             background: #bbdefb;
         }
         
-        }
-
         /* =========================
-           GALERIA / LEMBRANÇAS
+           MESES DE NAMORO
         ========================== */
 
-        .galeria {
+        .meses {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
+            gap: 20px;
         }
 
-        .foto-card {
-            background: #ffffff;
-            border: 1px solid #b3e5fc;
+        .mes {
+            background: linear-gradient(145deg, #ffffff, #e3f2fd);
+            border: 1px solid #90caf9;
             border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(144, 202, 249, 0.2);
-            transition: 0.3s;
-        }
-
-        .foto-card:hover {
-            transform: translateY(-7px);
-        }
-
-        .foto-card img {
-            width: 100%;
-            height: 260px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .foto-card figcaption {
-            padding: 15px;
+            padding: 20px;
             text-align: center;
-            color: #1976d2;
-            font-size: 16px;
+            box-shadow: 0 5px 15px rgba(144, 202, 249, 0.18);
         }
 
+        .mes h3 {
+            margin-bottom: 12px;
+            font-size: 21px;
+        }
+
+        .mes img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .mes p {
+            margin-top: 12px;
+            font-size: 15px;
+        }
         /* =========================
            MESES DE NAMORO
         ========================== */
@@ -385,27 +381,10 @@
             justify-content: center;
         }
 
-        /* =========================
-           RODAPÉ
-        ========================== */
-
-        footer {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            padding: 35px 20px;
-            background: #b3e5fc;
-            color: #1565c0;
-            margin-top: 20px;
-            border-top: 2px solid #90caf9;
-        }
     </style>
 </head>
 
 <body>
-
-    <!-- CORAÇÕES FLUTUANTES -->
-    <div class="coracoes" id="coracoes"></div>
 
     <!-- CABEÇALHO -->
     <header>
@@ -417,27 +396,23 @@
         <ul class="menu">
             <li>
                 <button class="botao ativo" onclick="abrirAba('inicio', this)">
-                    🏠 Início
+                    Início 🏠
                 </button>
             </li>
             <li>
                 <button class="botao" onclick="abrirAba('porques', this)">
-                    💙 Meus porquês
+                    Meus porquês 💙
                 </button>
             </li>
             <li>
                 <button class="botao" onclick="abrirAba('meses', this)">
-                    📸 Nossos meses
+                    Nossos meses 📸
                 </button>
             </li>
-            <li>
-                <button class="botao" onclick="abrirAba('fotos', this)">
-                    🖼️ Lembranças
-                </button>
-            </li>
+           
             <li>
                 <button class="botao" onclick="abrirAba('buques', this)">
-                    💐 Buquês
+                    Buquês 💐
                 </button>
             </li>
             <li>
@@ -497,7 +472,7 @@
                 <div class="meses">
                     <div class="mes">
                         <h3>1º Mês</h3>
-                        <img src="https://via.placeholder.com/300x230/bbdefb/1565c0?text=Mes+1" alt="1º Mês">
+                        <img src="festajunina.jpeg" alt="1º Mês">
                         <p>O começo de algo lindo e transformador.</p>
                     </div>
 
@@ -540,30 +515,6 @@
             </div>
         </section>
 
-        <!-- =========================
-             LEMBRANÇAS
-        ========================== -->
-        <section id="fotos" class="aba">
-            <div class="cartao">
-                <h2>🖼️ Outras Lembranças</h2>
-                <div class="galeria">
-                    <figure class="foto-card">
-                        <img src="igreja.jpeg" alt="Lembrança 1">
-                        <figcaption>Nosso passeio especial</figcaption>
-                    </figure>
-
-                    <figure class="foto-card">
-                        <img src="https://via.placeholder.com/300x260/b3e5fc/1565c0?text=Lembrança+2" alt="Lembrança 2">
-                        <figcaption>Aquele dia inesquecível</figcaption>
-                    </figure>
-
-                    <figure class="foto-card">
-                        <img src="https://via.placeholder.com/300x260/b3e5fc/1565c0?text=Lembrança+3" alt="Lembrança 3">
-                        <figcaption>Amo essa foto nossa</figcaption>
-                    </figure>
-                </div>
-            </div>
-        </section>
 
         <!-- =========================
              BUQUÊS
