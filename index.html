@@ -632,26 +632,6 @@
             document.getElementById(nomeAba).classList.add('ativa');
             elementoBotao.classList.add('ativo');
         }
-
-        // Criador de corações flutuantes no fundo
-        function criarCoracoes() {
-            const containerCoracoes = document.getElementById('coracoes');
-            const totalCoracoes = 18;
-
-            for (let i = 0; i < totalCoracoes; i++) {
-                const coracao = document.createElement('div');
-                coracao.classList.add('coracao');
-                coracao.innerHTML = '💙';
-                coracao.style.left = Math.random() * 100 + 'vw';
-                coracao.style.animationDuration = (Math.random() * 4 + 6) + 's';
-                coracao.style.animationDelay = (Math.random() * 5) + 's';
-                coracao.style.fontSize = (Math.random() * 15 + 15) + 'px';
-                containerCoracoes.appendChild(coracao);
-            }
-        }
-
-        // Inicializa os corações ao carregar a página
-        window.onload = criarCoracoes;
     </script>
 
 </body>
