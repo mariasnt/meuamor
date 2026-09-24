@@ -319,10 +319,11 @@
         }
 
         .disco {
-            width: 140px;
-            height: 140px;
+            width: 220px;
+            height: 220;
             margin: 20px auto;
             border-radius: 50%;
+            overflow: hidden;
             background: linear-gradient(145deg, #64b5f6, #bbdefb);
             display: flex;
             justify-content: center;
@@ -331,6 +332,13 @@
             box-shadow: 0 10px 25px rgba(100, 181, 246, 0.4);
             animation: girar 8s linear infinite;
         }
+
+        .disco img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+}
 
         @keyframes girar {
             from {
@@ -649,7 +657,7 @@
                 <h2>Nossa Música 🎵</h2>
 
                 <div class="disco">
-                    🎶
+                    <img src="geleiraokk.jpg" alt="capa albúm">
                 </div>
 
                 <div class="musica-player">
