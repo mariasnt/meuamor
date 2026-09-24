@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mayrlla Brenda Paixão 💙</title>
 
     <style>
@@ -349,6 +350,103 @@
             display: flex;
             justify-content: center;
         }
+
+        
+    /* =========================
+       RESPONSIVIDADE
+    ========================== */
+
+    @media (max-width: 1000px) {
+
+        body {
+            width: 100%;
+            margin: 0;
+        }
+
+        main {
+            width: 100%;
+            padding: 25px 20px;
+        }
+
+        .menu {
+            flex-wrap: wrap;
+        }
+
+        .meses {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .buques {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+
+    @media (max-width: 600px) {
+
+        body {
+            width: 100%;
+            min-width: 0;
+            overflow-x: hidden;
+        }
+
+        header {
+            padding: 30px 15px 25px;
+        }
+
+        header h1 {
+            font-size: 28px;
+        }
+
+        nav {
+            padding: 10px;
+        }
+
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+
+        .menu button {
+            width: 100%;
+            padding: 10px 8px;
+            font-size: 13px;
+        }
+
+        main {
+            width: 100%;
+            padding: 20px 12px;
+        }
+
+        .cartao {
+            padding: 20px 15px;
+        }
+
+        .lista-porques {
+            grid-template-columns: 1fr;
+        }
+
+        .meses {
+            grid-template-columns: 1fr;
+        }
+
+        .mes img {
+            height: 300px;
+        }
+
+        .buques {
+            grid-template-columns: 1fr;
+        }
+
+        .buque img {
+            height: 350px;
+        }
+
+        .musica-player audio {
+            width: 100%;
+        }
+    }
 
     </style>
 </head>
