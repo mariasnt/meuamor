@@ -664,24 +664,29 @@
 
     <!-- JAVASCRIPT -->
     <script>
-        // Função para alternar entre as abas
         function abrirAba(nomeAba, elementoBotao) {
-            // Esconde todas as abas
-            const abas = document.querySelectorAll('.aba');
-            abas.forEach(aba => aba.classList.remove('ativa'));
+    // Esconde todas as abas
+    const abas = document.querySelectorAll('.aba');
+    abas.forEach(aba => aba.classList.remove('ativa'));
 
-            // Remove a classe 'ativo' de todos os botões
-            const botoes = document.querySelectorAll('.menu .botao');
-            botoes.forEach(botao => botao.classList.remove('ativo'));
+    // Remove a classe "ativo" de todos os botões
+    const botoes = document.querySelectorAll('.menu .botao');
+    botoes.forEach(botao => botao.classList.remove('ativo'));
 
-            // Mostra a aba selecionada e ativa o botão clicado
-            document.getElementById(nomeAba).classList.add('ativa');
-            elementoBotao.classList.add('ativo');
-        }
+    // Mostra a aba selecionada
+    document.getElementById(nomeAba).classList.add('ativa');
+
+    // Ativa o botão clicado
+    elementoBotao.classList.add('ativo');
+
+    // Volta para o topo da página
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
     </script>
 
 </body>
-
-</div>
 
 </html>
