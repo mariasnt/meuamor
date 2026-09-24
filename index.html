@@ -240,7 +240,8 @@
         /* =========================
            MESES DE NAMORO
         ========================== */
-      .meses {
+
+        .meses {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
@@ -271,41 +272,45 @@
             margin-top: 12px;
             font-size: 15px;
         }
-
+       
         /* =========================
            BUQUÊS
         ========================== */
 
-        .buques {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
+     /* =========================
+   BUQUÊS
+========================= */
 
-        .buque {
-            background: #ffffff;
-            border: 1px solid #b3e5fc;
-            border-radius: 20px;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(144, 202, 249, 0.2);
-            transition: 0.3s;
-        }
+.buques {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    width: 100%;
+}
 
-        .buque:hover {
-            transform: translateY(-6px);
-        }
+.buque {
+    background: #ffffff;
+    border: 1px solid #b3e5fc;
+    border-radius: 20px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(144, 202, 249, 0.2);
+    transition: 0.3s;
+    overflow: hidden;
+}
 
-        .buque img {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-            border-radius: 15px;
-        }
+.buque:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(100, 181, 246, 0.3);
+}
 
-        .buque h3 {
-            margin-top: 15px;
-        }
+.buque img {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 15px;
+}
 
         /* =========================
            NOSSA MÚSICA
@@ -370,7 +375,7 @@
             </li>
             <li>
                 <button class="botao" onclick="abrirAba('momentos', this)">
-                    Nossos momentos 💗
+                    Nossos momentos 📸
                 </button>
             </li>
            
@@ -381,7 +386,7 @@
             </li>
             <li>
                 <button class="botao" onclick="abrirAba('musica', this)">
-                    🎵 Nossa música
+                    Nossa música 🎵
                 </button>
             </li>
         </ul>
@@ -394,9 +399,9 @@
         ========================== -->
         <section id="inicio" class="aba ativa">
             <div class="cartao inicio">
-                <h2>Só para te lembrar que eu te amo!</h2>
+                <h2>Só para te lembrar que eu amo você!</h2>
                 <p class="mensagem">
-                    Sou muito feliz ao seu lado, voce é o amor da minha vida 🤍!
+                   Sou mais feliz ao seu lado 🤍
                 </p>
                 <div class="data">
                     💕 7 meses de nós 💕
@@ -409,18 +414,18 @@
         ========================== -->
         <section id="porques" class="aba">
             <div class="cartao">
-                    <h2>💙 Meus porquês</h2>
+                    <h2>Meus porquês 💙</h2>
 
                 <ul class="lista-porques">
-                    <li>Sua voz</li>
-                    <li>Seu sorriso</li>
-                    <li>Sua risada</li>
-                    <li>Seu cabelo</li>
-                    <li>Seu cheiro</li>
-                    <li>Seu carinho</li>
-                    <li>Seu chamego</li>
-                    <li>Seus beijos</li>
-                    <li>Seu cuidado</li>
+                    <li>Sua voz 𖹭</li>
+                    <li>Seu sorriso 𖹭</li>
+                    <li>Sua risada 𖹭</li>
+                    <li>Seu cabelo 𖹭</li>
+                    <li>Seu cheiro 𖹭</li>
+                    <li>Seu carinho 𖹭</li>
+                    <li>Seu chamego 𖹭</li>
+                    <li>Seus beijos 𖹭</li>
+                    <li>Seu cuidado 𖹭</li>
                 </ul>
             </div>
         </section>
@@ -428,97 +433,136 @@
         <!-- =========================
              FOTOS DE CADA MÊS DE NAMORO
         ========================== -->
-        <section id="meses" class="aba">
-            <div class="cartao">
-                <h2>📸 Nossos melhores momentos!</h2>
-                <p style="text-align:center; margin-bottom:25px;">Cada mês ao seu lado foi um capítulo inesquecível da nossa história.</p>
+        <section id="momentos" class="aba">
+    <div class="cartao">
+        <h2>📸 Nossos momentos</h2>
 
-                <div class="mes">
-                    <div class="mes">
-                        <h3>Pedido de Namoro</h3>
-                        <img src="festajunina.jpeg" alt="Pedido de Namoro">
-                        <p>Oficializando nosso amor.</p>
-                    </div>
-
-                    <div class="mes">
-                        <h3>1° Mês</h3>
-                        <img src="https://via.placeholder.com/300x230/bbdefb/1565c0?text=Mes+2" alt="1° Mês">
-                    </div>
-
-                    <div class="mes">
-                        <h3>2° Mês</h3>
-                        <img src="https://via.placeholder.com/300x230/bbdefb/1565c0?text=Mes+3" alt="2° Mês">
-                    </div>
-
-                    <div class="mes">
-                        <h3>3° Mês</h3>
-                        <img src="https://via.placeholder.com/300x230/bbdefb/1565c0?text=Mes+4" alt="3° Mês">
-                    </div>
-
-                    <div class="mes">
-                        <h3>4° Mês</h3>
-                        <img src="https://via.placeholder.com/300x230/bbdefb/1565c0?text=Mes+5" alt="4° Mês">
-                    </div>
-
-                    <div class="mes">
-                        <h3>5° Mês</h3>
-                        <img src="https://via.placeholder.com/300x230/bbdefb/1565c0?text=Mes+6" alt="5° Mês>
-                    </div>
-
-                    <div class="mes">
-                        <h3>6° Mês</h3>
-                        <img src="https://via.placeholder.com/300x230/bbdefb/1565c0?text=Mes+7" alt="6° Mês">
-                    </div>
-                </div>
+        <div class="meses">
+            <div class="mes">
+                <img src="pedinamoro.jpg" alt="Nosso primeiro momento">
+                <p>Pedido de Namoro</p>
             </div>
-        </section>
+
+            <div class="mes">
+                <img src="festajunina.jpeg" alt="Momento especial">
+                <p>Festa Junina</p>
+            </div>
+
+            <div class="mes">
+                <img src="igreja.jpeg" alt="Momentos inesquecíveis">
+                <p>Missa - Paixão de Cristo</p>
+            </div>
+
+            <div class="mes">
+                <img src="sobrinha.jpeg" alt="Mais um momento">
+                <p>Conhecendo minhas sobrinhas</p>
+            </div>
+
+            <div class="mes">
+                <img src="eventofamilia.jpeg" alt="Nossas risadas">
+                <p>Aniversário da Bruna</p>
+            </div>
+
+            <div class="mes">
+                <img src="eventofamilia2.jpeg" alt="Um momento especial">
+                <p>Aniversário das gêmeas</p>
+            </div>
+
+            <div class="mes">
+                <img src="primeraparque.jpeg" alt="Até aqui, nós duas">
+                <p>Andando no carrinho de bate-bate</p>
+            </div>
+
+             <div class="mes">
+                <img src="milkshake.jpg" alt="Até aqui, nós duas">
+                <p>MilkShake</p>
+            </div>
+
+            <div class="mes">
+                <img src="anvmayrlla.jpg" alt="Até aqui, nós duas">
+                <p>Seu aniversário</p>
+            </div>
+
+
+             <div class="mes">
+                <img src="dormirprimeravez.jpeg" alt="Até aqui, nós duas">
+                <p>Dormindo Juntas</p>
+            </div>
+
+             <div class="mes">
+                <img src="primeirafoto.jpeg" alt="Até aqui, nós duas">
+                <p>Primeira foto</p>
+            </div>
+        </div>
+    </div>
+</section>
 
 
         <!-- =========================
              BUQUÊS
         ========================== -->
         <section id="buques" class="aba">
-            <div class="cartao">
-                <h2>💐 Flores para Você</h2>
-                <p style="text-align:center; margin-bottom:25px;">Flores azuis tão lindas e especiais quanto o seu sorriso.</p>
+    <div class="cartao">
+        <h2>Nosso jardim 💐</h2>
 
-                <div class="buques">
-                    <div class="buque">
-                        <img src="https://via.placeholder.com/300x280/90caf9/ffffff?text=Buquê+1" alt="Buquê 1">
-                        <h3>Rosas Azuis</h3>
-                        <p>Para lembrar o quanto você é única.</p>
-                    </div>
+        <div class="buques">
 
-                    <div class="buque">
-                        <img src="https://via.placeholder.com/300x280/90caf9/ffffff?text=Buquê+2" alt="Buquê 2">
-                        <h3>Flores do Campo</h3>
-                        <p>Representando a pureza do nosso amor.</p>
-                    </div>
-
-                    <div class="buque">
-                        <img src="https://via.placeholder.com/300x280/90caf9/ffffff?text=Buquê+3" alt="Buquê 3">
-                        <h3>Buquê Especial</h3>
-                        <p>Um carinho em forma de flor.</p>
-                    </div>
-                </div>
+            <div class="buque">
+                <img src="bqmayrlla1.jpg" alt="Buquê para Mayrlla">
             </div>
-        </section>
+
+            <div class="buque">
+                <img src="bqjuntas.jpg" alt="Buquê juntas">
+            </div>
+
+            <div class="buque">
+                <img src="bqrita1.jpg" alt="Buquê da Rita">
+            </div>
+
+            <div class="buque">
+                <img src="bqmayrllaa.jpg" alt="Buquê para Mayrlla">
+            </div>
+
+            <div class="buque">
+                <img src="bqritaaa.jpg" alt="Buquê da Rita">
+            </div>
+
+            <div class="buque">
+                <img src="brmayrlla2.jpg" alt="Buquê para Mayrlla">
+            </div>
+
+            <div class="buque">
+                <img src="bqritalirios.jpg" alt="Buquê de lírios">
+            </div>
+
+            <div class="buque">
+                <img src="bqmiranha.PNG" alt="Buquê">
+            </div>
+
+            <div class="buque">
+                <img src="ritarosa.PNG" alt="Rosa para Rita">
+            </div>
+
+        </div>
+    </div>
+</section>
 
         <!-- =========================
              NOSSA MÚSICA
         ========================== -->
         <section id="musica" class="aba">
             <div class="cartao musica">
-                <h2>🎵 Nossa Música</h2>
-                <p>Essa música sempre me faz lembrar de você e dos nossos momentos juntos!</p>
+                <h2>Nossa Música 🎵</h2>
+                <p>Nosso amor em forma de música!</p>
 
                 <div class="disco">
                     🎶
                 </div>
 
                 <div class="musica-player">
-                    <!-- Player do Spotify Embed (Substitua o link do src pela sua música preferida) -->
-                    <iframe style="border-radius:12px" src="https://open.spotify.com/s/RQEMIbi" width="80%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    <audio controls>
+                        <source src="ANAVITÓRIA, Jorge & Mateus - Geleira do tempo (letra) - ANAVITÓRIA (youtube).mp3" type="audio/mpeg">
+                    </audio>
                 </div>
             </div>
         </section>
